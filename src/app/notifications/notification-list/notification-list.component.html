@@ -1,1 +1,9 @@
-<p>notification-list works!</p>
+<div *ngFor="let message of messages$ | async">
+  <div class="notification visible">
+    <mat-icon class="notification__icon">report_problem</mat-icon>
+    <span class="notification__content">Warning: {{ message.text }}</span>
+    <span class="notification__close">
+      <mat-icon>close</mat-icon>
+    </span>
+  </div>
+</div>
